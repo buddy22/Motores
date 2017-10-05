@@ -1,0 +1,21 @@
+<p>
+  {{titulo}}
+</p>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descricao</th> 
+    <th>Uso</th>
+    <th>Editar</th>
+    <th>Remover</th>
+  </tr>
+  <tr *ngFor='let motor of motores'>
+    <td>{{motor.nome}}</td>
+    <td>{{motor.descricao}}</td> 
+    <td>{{motor.uso}}</td> 
+    <td><a href="">Editar</a></td>
+    <td><a href="">Eliminar</a></td>
+  </tr>
+</table>
+<h1 *ngIf='motores.length == 0'>no hay motores</h1>
+
